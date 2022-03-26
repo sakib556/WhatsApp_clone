@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
 import 'messaging_screen.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
   @override
@@ -16,13 +17,13 @@ class _SplashScreenState extends State<SplashScreen> {
         const Duration(seconds: 3),
             () => Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => MessagingPage()),
+          MaterialPageRoute(builder: (context) => LoginScreen()),
         ));
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green,
+      backgroundColor: Color(0xFF0ac025),
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -33,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 // crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Icon(Icons.phone,color: Colors.white,size: 60,),
+                    FaIcon(FontAwesomeIcons.whatsapp,color: Colors.white,size: 60,),
                     Text("WhatsApp",style: TextStyle(color: Colors.white,fontSize: 28,fontWeight: FontWeight.bold),),
                   ]),
             ) ,
